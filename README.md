@@ -22,8 +22,8 @@ calculation and categorization.
 ### 1. Clone the repo
 
 ```bash
-git clone <your-repo-url>
-cd patient-api
+git clone https://github.com/akumar2022-26/Patient-Management-Api.git
+cd Patient-Management-Api
 ```
 
 ### 2. Create a virtual environment and install dependencies
