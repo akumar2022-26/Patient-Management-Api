@@ -14,7 +14,7 @@ smoker = st.selectbox("Are you a smoker?", options=[True, False])
 city = st.text_input("City",value="Mumbai")
 occupation = st.selectbox("Occupation", options=['retired', 'employed', 'unemployed', 'student', 'freelancer', 'private_job','government_job'])
 
-if st.button("Predict Prenium Category"):
+if st.button("Predict Premium Category"):
     data = {
         "age": age,
         "weight": weight,
@@ -28,7 +28,7 @@ if st.button("Predict Prenium Category"):
         response = requests.post(API_URL, json=data)
         if response.status_code == 200:
             result = response.json()
-            st.success(f"Predicted Prenium Category: {result['predicted_category']}")
+            st.success(f"Predicted Premium Category: {result['predicted_category']}")
         else:
             st.error(f"Error: {response.status_code} - {response.text}")
     except requests.RequestException.ConnectionError:

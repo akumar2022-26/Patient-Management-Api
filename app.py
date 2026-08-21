@@ -65,7 +65,7 @@ class UserInput(BaseModel):
             return 3
 category_map = {0: "High", 1: "Low", 2: "Medium"}
 @app.post("/predict")
-def predict_prenium(data: UserInput):
+def predict_premium(data: UserInput):
     input_df = pd.DataFrame([{
             'bmi': data.bmi,
             'age_group': data.age_group,
